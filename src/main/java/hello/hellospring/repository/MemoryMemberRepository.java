@@ -26,11 +26,17 @@ public class MemoryMemberRepository implements MemberRepository {
     //람다식 공부 필요
     @Override
     public Optional<Member> findByName(String name) {
-        return store.values().stream().filter(member -> member.getName().equals(name)).findAny();
+        return store.values().stream()
+                .filter(member -> member.getName().equals(name))
+                .findAny(); //돌면서 하나 찾으면 바로 반환, 끝까지 찾아서 없으면 null 반환
     }
 
     @Override
     public List<Member> findAll() {
         return new ArrayList<>(store.values());
+    }
+
+    public void clearStore() {
+        store.clear(); //store를 싹 비움
     }
 }
