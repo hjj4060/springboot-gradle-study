@@ -13,3 +13,4 @@
 1. 스프링부트 개발환경 셋팅 : https://deftkang.tistory.com/203
 2. 스프링부트 라이브러리 의존관계와 View 환경 : https://deftkang.tistory.com/204
 3. 스프링부트 웹개발 3가지 방식과 동작원리 : https://deftkang.tistory.com/207
+4. 코드로 테스트 하는 방법 : https://deftkang.tistory.com/208

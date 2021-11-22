@@ -22,7 +22,7 @@ public class MemoryMemberRepositoryTest {
         repository.clearStore();
     }
 
-    @Test
+    @Test //@Test로 메서드가 실행된다.
     public void save() {
         Member member = new Member();
         member.setName("spring");
