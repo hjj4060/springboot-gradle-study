@@ -7,10 +7,15 @@ import hello.hellospring.repository.MemoryMemberRepository;
 import java.util.List;
 import java.util.Optional;
 
-//Service 클래스는 비즈니스 의존적으로 설계를한다. 그래서 네이밍을 비즈니스적으로 지어야 한다.
+//Service 클래스는 비즈니스 의존적으로 설계를한다. 그래서 네이밍을 비즈니스적으로 지어야 한다.\
+//command + shift + t 로 테스트클래스 생성 가능
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     /**
      * 회원 가입

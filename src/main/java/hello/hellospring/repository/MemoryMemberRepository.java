@@ -13,13 +13,12 @@ public class MemoryMemberRepository implements MemberRepository {
     public Member save(Member member) {
         member.setId(++sequence);
         store.put(member.getId(), member);
-
-        return null;
+        return member;
     }
 
     @Override
     public Optional<Member> findById(Long id) {
-        //null이 반환될 가능성이 있으면 Optional로 감싼다.
+        //null이 반환될 가능성이 있으면 Optional로 감싼다. 널이면 클라이언트쪽에서 뭘 할수있음.
         return Optional.ofNullable(store.get(id));
     }
 
