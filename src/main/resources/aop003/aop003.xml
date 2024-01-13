@@ -5,7 +5,13 @@
 
     <aop:aspectj-autoproxy/>
 
-    <bean id="myAspect" class="aop002.MyAspect"/>
-    <bean id="boy" class="aop002.Boy"/>
-    <bean id="girl" class="aop002.Girl"/>
+    <bean id="myAspect" class="aop003.MyAspect"/>
+    <bean id="boy" class="aop003.Boy"/>
+    <bean id="girl" class="aop003.Girl"/>
+
+    <aop:config>
+        <aop:aspect ref="myAspect">
+            <aop:before method="before" pointcut="execution(* runSomething())" />
+        </aop:aspect>
+    </aop:config>
 </beans>
