@@ -1,7 +1,6 @@
-package expert001_01;
+package expert001_04;
 
 public class KoreaTire implements Tire {
-    @Override
     public String getBrand() {
         return "코리아 타이어";
     }
