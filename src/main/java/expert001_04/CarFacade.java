@@ -1,12 +1,12 @@
 package expert001_04;
 
-public class Car {
+public class CarFacade {
     Tire tire;
     Engine engine;
 
-    public Car(Tire tire, Engine engine) {
-        this.tire = tire;
-        this.engine = engine;
+    public CarFacade() {
+        this.tire = new AmericaTire();
+        this.engine = new KoreaEngine();
     }
 
     public String getTireBrand() {
